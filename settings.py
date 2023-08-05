@@ -19,20 +19,20 @@ ADMINS = []
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'gbsfm',
+        'NAME': 'wafflefm',
         'USER': other_settings.DATABASE_USERNAME,
         'PASSWORD': other_settings.DATABASE_PASSWORD,
 	'HOST': other_settings.DATABASE_HOST
     }
 }
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', '0.0.0.0', '192.168.0.171', 'gbsfm', 'updated.gbs.fm', 'www.gbs.fm', 'gbs.fm', '192.168.0.134', 'gbsfm.hemma.lokal']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', '0.0.0.0', '192.168.1.238', 'wafflefm.oops.wtf', '99.146.38.214']
 
-TIME_ZONE = 'Europe/London'
+TIME_ZONE = 'America/Los_Angeles'
 
 # Language code for this installation. All choices can be found here:
 # http://www.i18nguy.com/unicode/language-identifiers.html
-LANGUAGE_CODE = 'en-uk'
+LANGUAGE_CODE = 'en-us'
 
 SITE_ID = 1
 
@@ -129,7 +129,7 @@ SERIALIZATION_MODULES = { 'json' : 'wadofstuff.django.serializers.json' }
 # GBSFM settings
 
 # IMPORTANT - SA validation will not happen if this is set to False
-IS_LIVE = True
+IS_LIVE = False
 
 LOGIC_DIR = os.path.join(BASE_DIR, 'playlist', 'logic')
 ICES_CONF = os.path.join(LOGIC_DIR, 'ices.conf')
@@ -161,7 +161,7 @@ PLAYLIST_MAX = 1
 REPLAY_INTERVAL = 24 * 90
 
 #STREAMINFO_URL = "http://gbsfm:8000/statistics"
-STREAMINFO_URL = "http://admin:adminpassword@192.168.0.154:8888/admin/stats"
+STREAMINFO_URL = "http://admin:adminpassword@192.168.1.238:8888/admin/stats"
 LOG_LEVEL = "DEBUG"
 LOG_FILE = os.path.join(BASE_DIR, 'pydj.log')
 SHOW_QUERIES = False
