@@ -26,8 +26,8 @@ DATABASES = {
     }
 }
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', '0.0.0.0', '192.168.1.238', 'wafflefm.oops.wtf', '99.146.38.214']
-
+# ALLOWED_HOSTS = ['localhost', '127.0.0.1', '0.0.0.0', '192.168.1.238', 'wafflefm.oops.wtf', '99.146.38.214']
+ALLOWED_HOSTS = ['*']
 TIME_ZONE = 'America/Los_Angeles'
 
 # Language code for this installation. All choices can be found here:
