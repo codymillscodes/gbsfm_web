@@ -27,13 +27,13 @@ DATABASES = {
     }
 }
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', '0.0.0.0', '192.168.0.171', 'gbsfm', 'updated.gbs.fm', 'www.gbs.fm', 'gbs.fm', '192.168.0.134', 'gbsfm.hemma.lokal', 'docker4', 'beta.gbs.fm']
-
-TIME_ZONE = 'Europe/London'
+# ALLOWED_HOSTS = ['localhost', '127.0.0.1', '0.0.0.0', '192.168.0.171', 'gbsfm', 'updated.gbs.fm', 'www.gbs.fm', 'gbs.fm', '192.168.0.134', 'gbsfm.hemma.lokal', 'docker4', 'beta.gbs.fm']
+ALLOWED_HOSTS = ['*']
+TIME_ZONE = 'America/Los_Angeles'
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.0/topics/i18n/
-LANGUAGE_CODE = 'en-uk'
+LANGUAGE_CODE = 'en-us'
 
 SITE_ID = 1
 
@@ -146,7 +146,7 @@ SERIALIZATION_MODULES = { 'json': 'wadofstuff.django.serializers.json' }
 # GBSFM settings
 
 # IMPORTANT - SA validation will not happen if this is set to False
-IS_LIVE = True
+IS_LIVE = False
 
 LOGIC_DIR = os.path.join(BASE_DIR, 'playlist', 'logic')
 ICES_CONF = os.path.join(LOGIC_DIR, 'ices.conf')
@@ -178,7 +178,7 @@ PLAYLIST_MAX = 1
 REPLAY_INTERVAL = 24 * 8
 
 #STREAMINFO_URL = "http://gbsfm:8000/statistics"
-STREAMINFO_URL = "http://admin:adminpassword@192.168.0.154:8888/admin/stats"
+STREAMINFO_URL = "http://admin:adminpassword@192.168.0.238:8888/admin/stats"
 LOG_LEVEL = "DEBUG"
 LOG_FILE = os.path.join(BASE_DIR, 'pydj.log')
 SHOW_QUERIES = False
